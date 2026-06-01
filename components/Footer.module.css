@@ -45,7 +45,7 @@
   align-items: center;
   gap: 12px;
 }
-.rocco { object-fit: contain; mix-blend-mode: multiply; filter: brightness(1.15) contrast(1.05); }
+.rocco { object-fit: contain; filter: drop-shadow(0 4px 14px rgba(46,91,255,0.3)); }
 .roccoBubble {
   background: rgba(46,91,255,0.12);
   border: 1px solid rgba(91,173,255,0.25);
