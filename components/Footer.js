@@ -54,7 +54,7 @@ export default function Footer() {
               <span className={styles.contactIcon}>📧</span> santos@diazsolutions.us
             </a>
             <div className={styles.contactRow}>
-              <span className={styles.contactIcon}>📍</span> Brentwood, NY
+              <span className={styles.contactIcon}>📍</span> Long Island, NY
             </div>
           </div>
 
@@ -91,7 +91,7 @@ export default function Footer() {
       </div>
 
       <div className={styles.bottom}>
-        <span>© {new Date().getFullYear()} Diaz Solutions. All rights reserved. · Brentwood, NY</span>
+        <span>© {new Date().getFullYear()} Diaz Solutions. All rights reserved. · Long Island, NY</span>
         <span className={styles.bottomRight}>Built with 🦝 by Rocco the Resourceful</span>
       </div>
     </footer>

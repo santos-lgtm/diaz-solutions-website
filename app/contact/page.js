@@ -96,7 +96,7 @@ export default function Contact() {
                   <span className={styles.detailIcon}>📍</span>
                   <div>
                     <div className={styles.detailLabel}>Location</div>
-                    <div className={styles.detailValue}>Brentwood, NY</div>
+                    <div className={styles.detailValue}>Long Island, NY</div>
                   </div>
                 </div>
                 <div className={styles.detailItem}>
