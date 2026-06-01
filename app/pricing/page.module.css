@@ -1,0 +1,26 @@
+.plansGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 32px; align-items: start; }
+.planCard { padding: 40px 32px; display: flex; flex-direction: column; gap: 0; position: relative; transition: transform 0.25s ease; }
+.planCard:hover { transform: translateY(-4px); }
+.featured { border-color: rgba(46,91,255,0.5) !important; box-shadow: 0 0 60px rgba(46,91,255,0.2); }
+.badge {
+  position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+  background: var(--ds-blue); color: #fff;
+  font-family: var(--font-display); font-size: 11px; font-weight: 700; letter-spacing: 0.15em;
+  padding: 5px 18px; border-radius: 999px; white-space: nowrap;
+  box-shadow: 0 4px 20px rgba(46,91,255,0.45);
+}
+.planName {
+  font-family: var(--font-display); font-size: 14px; font-weight: 700;
+  letter-spacing: 0.15em; text-transform: uppercase; color: var(--ds-cyan);
+  margin-bottom: 16px;
+}
+.planPrice { display: flex; align-items: baseline; gap: 4px; margin-bottom: 12px; }
+.priceCurr { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: rgba(255,255,255,0.6); }
+.priceNum { font-family: var(--font-display); font-size: 52px; font-weight: 900; color: #fff; line-height: 1; }
+.pricePer { font-size: 14px; color: rgba(255,255,255,0.45); }
+.planDesc { font-size: 14px; line-height: 1.6; color: rgba(255,255,255,0.55); margin-bottom: 28px; }
+.planFeatures { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 36px; flex: 1; }
+.planFeature { font-size: 14px; color: rgba(255,255,255,0.75); display: flex; align-items: center; gap: 10px; }
+.check { color: var(--ds-cyan); font-weight: 700; flex-shrink: 0; }
+.note { text-align: center; font-size: 14px; color: rgba(255,255,255,0.4); padding-bottom: 40px; }
+@media (max-width: 900px) { .plansGrid { grid-template-columns: 1fr; max-width: 440px; margin: 0 auto 32px; } }

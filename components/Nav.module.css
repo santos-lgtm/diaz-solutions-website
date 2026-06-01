@@ -1,0 +1,104 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 56px;
+  background: rgba(2, 8, 24, 0.5);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+.nav.scrolled {
+  background: rgba(2, 8, 24, 0.88);
+  box-shadow: 0 4px 30px rgba(0,0,0,0.4);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.logoImg {
+  border-radius: 8px;
+  object-fit: contain;
+}
+.logoText {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 17px;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.link {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.72);
+  transition: color 0.2s;
+  position: relative;
+}
+.link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; left: 50%;
+  width: 0; height: 1.5px;
+  background: var(--ds-cyan);
+  transition: width 0.25s ease, left 0.25s ease;
+}
+.link:hover { color: var(--ds-cyan); }
+.link:hover::after { width: 100%; left: 0; }
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+}
+.burger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .nav { padding: 16px 24px; }
+
+  .burger { display: flex; }
+
+  .links {
+    position: fixed;
+    top: 72px; left: 0; right: 0;
+    flex-direction: column;
+    background: rgba(2, 8, 24, 0.97);
+    backdrop-filter: blur(20px);
+    padding: 32px 24px;
+    gap: 24px;
+    transform: translateY(-120%);
+    opacity: 0;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    pointer-events: none;
+  }
+  .links.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .link { font-size: 18px; }
+}

@@ -1,0 +1,11 @@
+.servicesGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 20px; }
+.serviceCard { padding: 36px; transition: transform 0.25s ease, border-color 0.25s ease; }
+.serviceCard:hover { transform: translateY(-5px); border-color: rgba(91,173,255,0.3); }
+.serviceIcon { font-size: 38px; margin-bottom: 16px; }
+.serviceTitle { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 12px; }
+.serviceDesc { font-size: 14px; line-height: 1.65; color: rgba(255,255,255,0.6); margin-bottom: 20px; }
+.featureList { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.featureItem { font-size: 13px; color: rgba(255,255,255,0.7); display: flex; align-items: center; gap: 8px; }
+.check { color: var(--ds-cyan); font-weight: 700; font-size: 14px; }
+@media (max-width: 1024px) { .servicesGrid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .servicesGrid { grid-template-columns: 1fr; } }
