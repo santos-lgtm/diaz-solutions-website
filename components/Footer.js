@@ -3,17 +3,19 @@ import Image from 'next/image';
 import styles from './Footer.module.css';
 
 const footerLinks = {
+  Services: [
+    { href: '/services', label: 'Card Processing' },
+    { href: '/services', label: 'POS Systems' },
+    { href: '/services', label: 'E-Commerce Payments' },
+    { href: '/services', label: 'ACH & eCheck' },
+    { href: '/services', label: 'High-Risk Accounts' },
+    { href: '/pricing', label: 'Pricing' },
+  ],
   Company: [
     { href: '/about', label: 'About Us' },
-    { href: '/blog', label: 'Blog' },
     { href: '/portfolio', label: 'Portfolio' },
+    { href: '/blog', label: 'Blog' },
     { href: '/contact', label: 'Contact' },
-  ],
-  Services: [
-    { href: '/services', label: 'Payment Processing' },
-    { href: '/services', label: 'Business Solutions' },
-    { href: '/services', label: 'Integrations' },
-    { href: '/pricing', label: 'Pricing' },
   ],
   Legal: [
     { href: '/privacy', label: 'Privacy Policy' },
@@ -21,22 +23,55 @@ const footerLinks = {
   ],
 };
 
+const socials = [
+  { href: 'https://www.linkedin.com/in/santos-diaz-3abb87289/', label: 'LinkedIn', icon: '🔗' },
+  { href: 'https://www.instagram.com/santosdiaz.us/', label: 'Instagram', icon: '📸' },
+  { href: 'https://www.facebook.com/santos.diaz.22936', label: 'Facebook', icon: '👥' },
+  { href: 'https://x.com/diazsolutions', label: 'X / Twitter', icon: '𝕏' },
+  { href: 'https://www.reddit.com/user/PaymentsDude/', label: 'Reddit', icon: '🤖' },
+];
+
 export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.inner}>
+        {/* Brand col */}
         <div className={styles.brand}>
           <Link href="/" className={styles.logo}>
             <Image src="/logo.png" alt="Diaz Solutions" width={48} height={48} className={styles.logoImg} />
             <span className={styles.logoText}>Diaz Solutions</span>
           </Link>
           <p className={styles.tagline}>
-            Resourceful payment solutions for modern businesses. Meet Rocco — your fintech partner.
+            Merchant service consulting &amp; payment solutions for businesses of all sizes — powered by Rocco the Resourceful.
           </p>
+
+          {/* Contact info */}
+          <div className={styles.contactInfo}>
+            <a href="tel:6317475508" className={styles.contactRow}>
+              <span className={styles.contactIcon}>📞</span> (631) 747-5508
+            </a>
+            <a href="mailto:santos@diazsolutions.us" className={styles.contactRow}>
+              <span className={styles.contactIcon}>📧</span> santos@diazsolutions.us
+            </a>
+            <div className={styles.contactRow}>
+              <span className={styles.contactIcon}>📍</span> Brentwood, NY
+            </div>
+          </div>
+
+          {/* Social links */}
+          <div className={styles.socials}>
+            {socials.map(s => (
+              <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
+                className={styles.socialBtn} aria-label={s.label} title={s.label}>
+                {s.icon}
+              </a>
+            ))}
+          </div>
+
           <div className={styles.roccoWrap}>
             <Image src="/rocco.png" alt="Rocco the Resourceful" width={80} height={92} className={styles.rocco} />
             <div className={styles.roccoBubble}>
-              <span>Rocco the Resourceful</span>
+              <span>Rocco the Resourceful™</span>
             </div>
           </div>
         </div>
@@ -56,7 +91,7 @@ export default function Footer() {
       </div>
 
       <div className={styles.bottom}>
-        <span>© {new Date().getFullYear()} Diaz Solutions. All rights reserved.</span>
+        <span>© {new Date().getFullYear()} Diaz Solutions. All rights reserved. · Brentwood, NY</span>
         <span className={styles.bottomRight}>Built with 🦝 by Rocco the Resourceful</span>
       </div>
     </footer>

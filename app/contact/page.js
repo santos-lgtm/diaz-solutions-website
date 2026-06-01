@@ -82,14 +82,21 @@ export default function Contact() {
                   <span className={styles.detailIcon}>📧</span>
                   <div>
                     <div className={styles.detailLabel}>Email</div>
-                    <div className={styles.detailValue}>hello@diazsolutions.com</div>
+                    <div className={styles.detailValue}>santos@diazsolutions.us</div>
                   </div>
                 </div>
                 <div className={styles.detailItem}>
                   <span className={styles.detailIcon}>📞</span>
                   <div>
                     <div className={styles.detailLabel}>Phone</div>
-                    <div className={styles.detailValue}>+1 (800) DIAZ-PAY</div>
+                    <div className={styles.detailValue}>(631) 747-5508</div>
+                  </div>
+                </div>
+                <div className={styles.detailItem}>
+                  <span className={styles.detailIcon}>📍</span>
+                  <div>
+                    <div className={styles.detailLabel}>Location</div>
+                    <div className={styles.detailValue}>Brentwood, NY</div>
                   </div>
                 </div>
                 <div className={styles.detailItem}>
