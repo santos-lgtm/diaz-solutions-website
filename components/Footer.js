@@ -34,7 +34,7 @@ export default function Footer() {
             Resourceful payment solutions for modern businesses. Meet Rocco — your fintech partner.
           </p>
           <div className={styles.roccoWrap}>
-            <Image src="/rocco.jpg" alt="Rocco the Resourceful" width={80} height={80} className={styles.rocco} />
+            <Image src="/rocco.png" alt="Rocco the Resourceful" width={80} height={92} className={styles.rocco} />
             <div className={styles.roccoBubble}>
               <span>Rocco the Resourceful</span>
             </div>

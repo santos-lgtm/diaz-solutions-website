@@ -64,9 +64,10 @@
   position: relative;
   z-index: 1;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 0;
 }
 
 /* Floating payment card */
@@ -128,18 +129,24 @@
 .cardTx { display: flex; align-items: center; justify-content: space-between; font-size: 12px; color: rgba(255,255,255,0.45); }
 .txAmount { font-weight: 700; color: #4cd080; font-size: 13px; }
 
-/* Rocco floating beside card */
-.roccoHero { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+/* Rocco floating full-body in hero */
+.roccoHero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  position: relative;
+  margin-left: -20px;
+}
 .roccoImg {
-  border-radius: 50%;
-  border: 3px solid rgba(91,173,255,0.35);
-  object-fit: cover;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  filter: brightness(1.15) contrast(1.05) drop-shadow(0 20px 40px rgba(46,91,255,0.35));
   animation: roccoFloat 4s ease-in-out 0.5s infinite;
-  box-shadow: 0 20px 50px rgba(46,91,255,0.3);
 }
 @keyframes roccoFloat {
-  0%,100% { transform: translateY(0) rotate(-2deg); }
-  50%      { transform: translateY(-10px) rotate(2deg); }
+  0%,100% { transform: translateY(0) rotate(-1deg); }
+  50%      { transform: translateY(-14px) rotate(1deg); }
 }
 .roccoTag {
   font-family: var(--font-display);
@@ -152,6 +159,7 @@
   border: 1px solid rgba(91,173,255,0.25);
   border-radius: 999px;
   padding: 5px 14px;
+  margin-top: -8px;
 }
 
 /* ── BRANDS ── */
@@ -263,22 +271,31 @@
   letter-spacing: -0.02em;
 }
 .roccoDesc { font-size: 16px; line-height: 1.7; color: rgba(255,255,255,0.65); margin-bottom: 32px; max-width: 420px; }
-.roccoImageWrap { position: relative; display: flex; justify-content: center; }
+.roccoImageWrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
 .roccoGlow {
   position: absolute;
-  inset: -20%;
-  background: radial-gradient(circle, rgba(46,91,255,0.3) 0%, transparent 60%);
-  filter: blur(40px);
+  bottom: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 60%;
+  background: radial-gradient(ellipse, rgba(46,91,255,0.35) 0%, transparent 65%);
+  filter: blur(50px);
   pointer-events: none;
+  z-index: 0;
 }
 .roccoLarge {
-  border-radius: 50%;
-  border: 4px solid rgba(91,173,255,0.3);
-  object-fit: cover;
+  object-fit: contain;
   position: relative;
   z-index: 1;
+  mix-blend-mode: multiply;
+  filter: brightness(1.18) contrast(1.06) drop-shadow(0 10px 40px rgba(46,91,255,0.4));
   animation: roccoFloat 5s ease-in-out infinite;
-  box-shadow: 0 30px 80px rgba(46,91,255,0.35);
 }
 
 /* ── TESTIMONIALS ── */
@@ -358,12 +375,13 @@
 
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr; padding: 60px 24px 40px; gap: 48px; }
-  .heroVisual { flex-direction: row; }
+  .heroVisual { flex-direction: column; align-items: center; }
+  .roccoHero { margin-left: 0; }
   .stepsRow { grid-template-columns: 1fr; }
   .stepConnector { display: none; }
   .roccoInner { grid-template-columns: 1fr; padding: 40px; gap: 32px; }
   .roccoImageWrap { order: -1; }
-  .roccoLarge { width: 200px; height: 200px; }
+  .roccoLarge { width: 260px; height: auto; }
 }
 
 @media (max-width: 600px) {

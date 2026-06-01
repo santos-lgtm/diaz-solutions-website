@@ -70,7 +70,7 @@ export default function Contact() {
             {/* Info panel */}
             <div className={styles.infoPanel}>
               <div className={`${styles.roccoCard} glass-card`}>
-                <Image src="/rocco.jpg" alt="Rocco the Resourceful" width={100} height={100} className={styles.roccoImg} />
+                <Image src="/rocco.png" alt="Rocco the Resourceful" width={120} height={138} className={styles.roccoImg} />
                 <div className={styles.roccoInfo}>
                   <div className={styles.roccoName}>Rocco the Resourceful™</div>
                   <div className={styles.roccoSub}>Your Diaz Solutions Partner</div>

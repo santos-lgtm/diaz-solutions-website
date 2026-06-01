@@ -39,7 +39,7 @@ export default function About() {
           <div className={`${styles.roccoFeature} glass-card`}>
             <div className={styles.roccoLeft}>
               <div className={styles.roccoGlow} aria-hidden="true" />
-              <Image src="/rocco.jpg" alt="Rocco the Resourceful" width={300} height={300} className={styles.roccoImg} />
+              <Image src="/rocco.png" alt="Rocco the Resourceful" width={280} height={320} className={styles.roccoImg} />
             </div>
             <div className={styles.roccoRight}>
               <div className="eyebrow">Meet the Mascot</div>

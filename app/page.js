@@ -130,7 +130,7 @@ export default function Home() {
               </div>
             </div>
             <div className={styles.roccoHero}>
-              <Image src="/rocco.jpg" alt="Rocco the Resourceful" width={160} height={160} className={styles.roccoImg} priority />
+              <Image src="/rocco.png" alt="Rocco the Resourceful" width={220} height={260} className={styles.roccoImg} priority />
               <div className={styles.roccoTag}>Rocco the Resourceful™</div>
             </div>
           </div>
@@ -213,10 +213,10 @@ export default function Home() {
             <div className={styles.roccoImageWrap}>
               <div className={styles.roccoGlow} aria-hidden="true" />
               <Image
-                src="/rocco.jpg"
+                src="/rocco.png"
                 alt="Rocco the Resourceful — Diaz Solutions mascot"
-                width={340}
-                height={340}
+                width={380}
+                height={440}
                 className={styles.roccoLarge}
               />
             </div>

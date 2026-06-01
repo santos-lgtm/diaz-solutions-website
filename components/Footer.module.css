@@ -45,11 +45,7 @@
   align-items: center;
   gap: 12px;
 }
-.rocco {
-  border-radius: 50%;
-  border: 2px solid rgba(91,173,255,0.3);
-  object-fit: cover;
-}
+.rocco { object-fit: contain; mix-blend-mode: multiply; filter: brightness(1.15) contrast(1.05); }
 .roccoBubble {
   background: rgba(46,91,255,0.12);
   border: 1px solid rgba(91,173,255,0.25);
