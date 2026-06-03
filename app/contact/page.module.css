@@ -39,3 +39,8 @@
   .contactLayout { grid-template-columns: 1fr; }
   .formRow { grid-template-columns: 1fr; }
 }
+@media (max-width: 600px) {
+  .formWrap { padding: 24px; }
+  .roccoCard { padding: 20px; }
+  .contactDetail { padding: 20px; }
+}

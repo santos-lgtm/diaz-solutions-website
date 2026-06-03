@@ -47,6 +47,7 @@
   margin-top: 48px;
   padding-top: 32px;
   border-top: 1px solid rgba(255,255,255,0.08);
+  flex-wrap: wrap;
 }
 .stat { display: flex; flex-direction: column; gap: 4px; }
 .statNum {
@@ -330,7 +331,8 @@
   position: absolute;
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
-  width: 600px; height: 300px;
+  width: min(600px, 90%);
+  height: 300px;
   background: radial-gradient(ellipse, rgba(46,91,255,0.2) 0%, transparent 65%);
   filter: blur(40px);
   pointer-events: none;

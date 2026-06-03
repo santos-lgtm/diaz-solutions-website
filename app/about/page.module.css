@@ -35,5 +35,7 @@
   .valuesGrid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 600px) {
+  .roccoFeature { padding: 24px; gap: 24px; }
   .valuesGrid { grid-template-columns: 1fr; }
+  .valueCard { padding: 24px; }
 }

@@ -8,4 +8,4 @@
 .featureItem { font-size: 13px; color: rgba(255,255,255,0.7); display: flex; align-items: center; gap: 8px; }
 .check { color: var(--ds-cyan); font-weight: 700; font-size: 14px; }
 @media (max-width: 1024px) { .servicesGrid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 600px) { .servicesGrid { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .servicesGrid { grid-template-columns: 1fr; } .serviceCard { padding: 24px; } }
