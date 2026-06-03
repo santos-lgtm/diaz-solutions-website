@@ -7,12 +7,32 @@ import styles from './page.module.css';
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', company: '', message: '' });
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState('idle'); // idle | sending | success | error
+  const [errorMsg, setErrorMsg] = useState('');
 
   const handleChange = e => setForm(f => ({ ...f, [e.target.name]: e.target.value }));
-  const handleSubmit = e => {
+
+  const handleSubmit = async e => {
     e.preventDefault();
-    setSent(true);
+    setStatus('sending');
+    setErrorMsg('');
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+      const data = await res.json();
+      if (res.ok && data.success) {
+        setStatus('success');
+      } else {
+        setErrorMsg(data.error || 'Something went wrong.');
+        setStatus('error');
+      }
+    } catch {
+      setErrorMsg('Network error. Please try again.');
+      setStatus('error');
+    }
   };
 
   return (
@@ -33,7 +53,7 @@ export default function Contact() {
           <div className={styles.contactLayout}>
             {/* Form */}
             <div className={`${styles.formWrap} glass-card`}>
-              {sent ? (
+              {status === 'success' ? (
                 <div className={styles.success}>
                   <div className={styles.successIcon}>🦝</div>
                   <h2 className={styles.successTitle}>Rocco Got Your Message!</h2>
@@ -60,8 +80,11 @@ export default function Contact() {
                     <label className={styles.label} htmlFor="contact-message">Message</label>
                     <textarea id="contact-message" className={`${styles.input} ${styles.textarea}`} name="message" placeholder="Tell us about your payment needs..." value={form.message} onChange={handleChange} required rows={5} />
                   </div>
-                  <button type="submit" className="btn-primary" style={{ width: '100%', justifyContent: 'center' }} id="contact-submit">
-                    Send Message →
+                  {status === 'error' && (
+                    <p style={{ color: '#ff6b6b', fontSize: '14px', margin: '0 0 12px' }}>⚠️ {errorMsg}</p>
+                  )}
+                  <button type="submit" className="btn-primary" style={{ width: '100%', justifyContent: 'center', opacity: status === 'sending' ? 0.7 : 1 }} id="contact-submit" disabled={status === 'sending'}>
+                    {status === 'sending' ? 'Sending...' : 'Send Message →'}
                   </button>
                 </form>
               )}
