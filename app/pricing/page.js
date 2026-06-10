@@ -4,8 +4,10 @@ import Link from 'next/link';
 import styles from './page.module.css';
 
 export const metadata = {
-  title: 'Pricing — Diaz Solutions',
-  description: 'Transparent, fair pricing for Diaz Solutions payment processing. No hidden fees, no surprises.',
+  title: 'Transparent Pricing for Merchant Services — Diaz Solutions',
+  description: 'Simple, transparent pricing for credit card processing and merchant services. No hidden fees, no long-term contracts. View Diaz Solutions\' Starter, Growth, and Enterprise plans.',
+  keywords: ['merchant services pricing', 'credit card processing fees', 'payment processing cost', 'merchant account pricing Long Island'],
+  alternates: { canonical: 'https://diazsolutions.us/pricing' },
 };
 
 const plans = [

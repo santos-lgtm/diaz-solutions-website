@@ -1,0 +1,25 @@
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 40px;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+.backLink:hover { color: var(--ds-cyan); }
+
+.relatedCard {
+  display: block;
+  background: rgba(13,26,53,0.5);
+  border: 1px solid rgba(91,173,255,0.1);
+  border-radius: 14px;
+  padding: 20px 24px;
+  transition: border-color 0.2s, transform 0.2s;
+  text-decoration: none;
+}
+.relatedCard:hover {
+  border-color: rgba(91,173,255,0.3);
+  transform: translateY(-2px);
+}

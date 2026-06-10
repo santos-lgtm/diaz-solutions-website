@@ -9,6 +9,7 @@ export default function sitemap() {
     { url: `${baseUrl}/portfolio`, priority: 0.7, changeFrequency: 'monthly' },
     { url: `${baseUrl}/blog`, priority: 0.7, changeFrequency: 'weekly' },
     { url: `${baseUrl}/privacy`, priority: 0.3, changeFrequency: 'yearly' },
+    { url: `${baseUrl}/terms`, priority: 0.3, changeFrequency: 'yearly' },
   ];
 
   return pages.map(page => ({

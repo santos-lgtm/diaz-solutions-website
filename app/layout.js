@@ -54,9 +54,71 @@ export const metadata = {
   },
 };
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': ['LocalBusiness', 'FinancialService'],
+  name: 'Diaz Solutions',
+  alternateName: 'Diaz Global Enterprises LLC',
+  description: 'Merchant service consulting and payment processing solutions for businesses of all sizes. Credit card processing, POS systems, ACH, high-risk accounts, cash discount programs, and global payments.',
+  url: 'https://diazsolutions.us',
+  logo: 'https://diazsolutions.us/icon.png',
+  image: 'https://diazsolutions.us/icon.png',
+  telephone: '+1-631-747-5508',
+  email: 'santos@diazsolutions.us',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Long Island',
+    addressRegion: 'NY',
+    addressCountry: 'US',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 40.7891,
+    longitude: -73.1350,
+  },
+  areaServed: [
+    { '@type': 'State', name: 'New York' },
+    { '@type': 'Country', name: 'United States' },
+  ],
+  serviceType: [
+    'Credit Card Processing',
+    'Merchant Services',
+    'POS Systems',
+    'ACH Processing',
+    'High-Risk Merchant Accounts',
+    'Cash Discount Programs',
+    'E-Commerce Payment Processing',
+    'Payment Gateway Setup',
+  ],
+  sameAs: [
+    'https://www.linkedin.com/in/santos-diaz-3abb87289/',
+    'https://www.instagram.com/santosdiaz.us/',
+    'https://www.facebook.com/santos.diaz.22936',
+    'https://x.com/diazsolutions',
+  ],
+  priceRange: '$$',
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'],
+    opens: '09:00',
+    closes: '18:00',
+  },
+  founder: {
+    '@type': 'Person',
+    name: 'Santos Diaz',
+    jobTitle: 'Founder & Payment Consultant',
+  },
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body>
         <div className="starfield" aria-hidden="true" />
         {children}

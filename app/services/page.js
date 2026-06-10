@@ -4,8 +4,10 @@ import Link from 'next/link';
 import styles from './page.module.css';
 
 export const metadata = {
-  title: 'Services — Diaz Solutions',
-  description: 'Diaz Solutions offers merchant service consulting and payment solutions including credit card processing, POS systems, ACH, e-commerce, high-risk accounts, and more.',
+  title: 'Merchant Services & Payment Processing Solutions — Diaz Solutions',
+  description: 'Explore Diaz Solutions\' full range of merchant services: credit card processing, POS systems, ACH payments, e-commerce gateways, high-risk merchant accounts, cash discount programs, and more. Serving Long Island, NY and businesses nationwide.',
+  keywords: ['merchant services Long Island', 'credit card processing NY', 'POS systems', 'ACH processing', 'high risk merchant account', 'cash discount program'],
+  alternates: { canonical: 'https://diazsolutions.us/services' },
 };
 
 const services = [

@@ -5,8 +5,10 @@ import Link from 'next/link';
 import styles from './page.module.css';
 
 export const metadata = {
-  title: 'About Us — Diaz Solutions',
-  description: 'Meet the team behind Diaz Solutions and our mascot Rocco the Resourceful. Learn our story, mission, and values.',
+  title: 'About Diaz Solutions — Meet Santos Diaz & Rocco the Resourceful',
+  description: 'Learn about Diaz Solutions, founded by Santos Diaz in Long Island, NY. We help businesses across the USA and 150+ countries save money on payment processing with honest, resourceful merchant service consulting.',
+  keywords: ['about Diaz Solutions', 'Santos Diaz merchant services', 'Rocco the Resourceful', 'payment consultant Long Island NY'],
+  alternates: { canonical: 'https://diazsolutions.us/about' },
 };
 
 const values = [
