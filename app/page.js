@@ -58,9 +58,24 @@ const steps = [
 ];
 
 const testimonials = [
-  { name: 'Maria C.', role: 'CEO, TechStart LLC', quote: 'Diaz Solutions transformed how we handle payments. Rocco\'s team is incredibly resourceful!', stars: 5 },
-  { name: 'James R.', role: 'CFO, NovaBuild Co.', quote: 'Switching to Diaz Solutions saved us 40% on processing fees. The analytics alone are worth it.', stars: 5 },
-  { name: 'Aisha T.', role: 'Founder, PulseStore', quote: 'The onboarding was seamless. We were live in under a day. Outstanding support.', stars: 5 },
+  {
+    name: 'Bello Poultry Market',
+    role: 'Supermarket & Grocery',
+    quote: 'Santos came in, assessed everything, and completely overhauled how we handle payments. He set up our POS system, lowered our processing fees dramatically, and we\'ve saved over $100,000 in fees since switching. On top of that, our payouts come faster than ever. And whenever something comes up, he\'s available 24/7 — you can\'t put a price on that kind of support.',
+    stars: 5,
+  },
+  {
+    name: 'El Salvador Deli',
+    role: 'Deli & Grocery',
+    quote: 'Before Santos, we were paying way too much every month just to accept cards. He set us up with dual pricing the right way — fully compliant — and just like that, our card fees disappeared. We\'re saving over $5,000 a month now. That\'s money that stays in our business. And he\'s always one call away if we ever need anything.',
+    stars: 5,
+  },
+  {
+    name: 'Land Resource Container Service',
+    role: 'Dumpster Rental Services',
+    quote: 'What I needed was someone I could actually call when something went wrong — not a 1-800 number. Santos gave us that. He\'s our point of contact, available anytime, day or night. He also got us a new terminal with tap to pay which our customers love. It\'s like having a payments guy on our team.',
+    stars: 5,
+  },
 ];
 
 const brands = ['Visa', 'Mastercard', 'Amex', 'PayPal', 'Apple Pay', 'Google Pay', 'ACH', 'Wire'];
